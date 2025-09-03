@@ -78,6 +78,9 @@ app.use(`${prefix}/covid`, async (req: Request, res: Response) => {
   } catch (error) {}
 })
 
+app.get(`${prefix}/iso-regions`, (req: Request, res: Response) => {})
+
 app.get('/test', (_, res) => res.json({ message: 'App is up and running' }))
 
+console.log(`App starting on port ${port}`)
 app.listen(port, () => console.log(`App is running on port ${port}`))
